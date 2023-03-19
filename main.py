@@ -60,9 +60,6 @@ clock = pygame.time.Clock()
 # player speed variable for easy testing
 player_speed = 5
 
-# make ball start non-collided
-ball_collided = False
-
 # make the game start not started
 started = False
 
