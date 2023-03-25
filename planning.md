@@ -1,4 +1,4 @@
-# crappy pong clone
+# bad pong clone
 
 ### main loop:
 

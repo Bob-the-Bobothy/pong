@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "repl_nix_pong"
+version = "0.1.0"
+description = ""
+authors = ["Replit user <<>>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+keyboard = "^0.13.5"
+pygame = "^2.3.0"
+getkey = "^0.6.5"
+Flask = "^2.2.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
