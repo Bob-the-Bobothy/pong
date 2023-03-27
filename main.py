@@ -7,7 +7,7 @@ import random
 
 # initalize pygame
 pygame.init()
-
+ 
 # set screen size
 x_size = 640
 y_size = 480
