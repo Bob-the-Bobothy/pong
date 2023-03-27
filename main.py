@@ -2,7 +2,7 @@
 import pygame
 from pygame.locals import *
 import sys
-import keyboard
+from getkey import getkey, keys
 import random
 
 # initalize pygame
@@ -74,19 +74,22 @@ while True:
     # force 60fps
     clock.tick(60)
 
+    #getkey stuff
+    key = getkey()
+
     # make ball rectangle for collision
     ball_rect = pygame.Rect(ball_x - ball_radius, ball_y - ball_radius, ball_radius * 2, ball_radius * 2)
 
     # paddle movement
-    if keyboard.is_pressed('UP') and paddle_rect.y > 0: # move up
+    if key == keys.UP and paddle_rect.y > 0: # move up
         paddle_rect.y -= player_speed
 
-    if keyboard.is_pressed('DOWN') and paddle_rect.y < y_size - paddle_height: # move down
+    if key == keys.DOWN and paddle_rect.y < y_size - paddle_height: # move down
         paddle_rect.y += player_speed
 
     # startup game
     if started is False:
-        if keyboard.is_pressed('UP') or keyboard.is_pressed('DOWN'): # wait until user input
+        if key == keys.UP or keys.DOWN: # wait until user input
             started = True
 
             # make ball go to start
